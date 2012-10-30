@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>JS Testing</title>
+        <meta name="generator" content="Vim http://vim.org/">
+        <meta name="author" content="Rob Orsini">
+        <script type="text/javascript" src="/javascript/raphael.js"></script>
+
+        <style>
+            #notepad {
+                border: 1px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+
+<h1>JS Piano</h1>
+
+<script type="text/javascript">
+
+    note_colors = { 'C':  '#ca0d3c', 'Cb': '#ca0d3c',
+                    'G':  '#e43a23',
+                    'D':  '#ec6f21',
+                    'A':  '#f6ac1a',
+                    'E':  '#ebda10',
+                    'B':  '#97c82b',
+                    'Gb': '#36a938', 'F#': '#36a938',
+                    'Db': '#009a82', 'C#': '#009a82',
+                    'Ab': '#0084d4', 'G#': '#0084d4',
+                    'Eb': '#2f4d9e', 'D#': '#2f4d9e',
+                    'Bb': '#6d2a86', 'A#': '#6d2a86',
+                    'F':  '#970a7c', 'E#': '#970a7c', };
+
+    var paper = Raphael(10, 50, 420, 300);
+
+    //var notes = ['C','D','E','F','G','A','B'];
+    var notes = ['D','E','F#','G','A','B','C'];
+    var notes = ['D','E','F#','G','A','B','C'];
+    var notes = ['Db', 'Eb', 'F', 'Gb', 'Ab', 'Bb', 'C'];
+
+    function getColor(note, scale) {
+        var notes = note;
+        if ( typeof note == "string" ) {
+            notes = [note];
+        }
+        for ( note_index in notes ) {
+            note = notes[note_index];
+            for ( scale_index in scale ) {
+                if ( scale[scale_index] == note ) {
+                    return note_colors[note];
+                    if ( note.length > 1 ) {
+                        return "#2f4d9e";
+                    } else {
+                        return "#69baea";
+                    }
+                }
+            }
+        }
+        if ( note.length > 1 ) {
+            return "#000";
+        } else {
+            return "#fff";
+        }
+    }
+
+    var c1  = paper.rect( 40, 40, 20, 90, 2).attr({fill: getColor('C', notes)});
+    var d1  = paper.rect( 60, 40, 20, 90, 2).attr({fill: getColor('D', notes)});
+    var e1  = paper.rect( 80, 40, 20, 90, 2).attr({fill: getColor('E', notes)});
+    var f1  = paper.rect(100, 40, 20, 90, 2).attr({fill: getColor('F', notes)});
+    var g1  = paper.rect(120, 40, 20, 90, 2).attr({fill: getColor('G', notes)});
+    var a1  = paper.rect(140, 40, 20, 90, 2).attr({fill: getColor('A', notes)});
+    var b1  = paper.rect(160, 40, 20, 90, 2).attr({fill: getColor('B', notes)});
+
+    var c2  = paper.rect(180, 40, 20, 90, 2).attr({fill: getColor('C', notes)});
+    var d2  = paper.rect(200, 40, 20, 90, 2).attr({fill: getColor('D', notes)});
+    var e2  = paper.rect(220, 40, 20, 90, 2).attr({fill: getColor('E', notes)});
+    var f2  = paper.rect(240, 40, 20, 90, 2).attr({fill: getColor('F', notes)});
+    var g2  = paper.rect(260, 40, 20, 90, 2).attr({fill: getColor('G', notes)});
+    var a2  = paper.rect(280, 40, 20, 90, 2).attr({fill: getColor('A', notes)});
+    var b2  = paper.rect(300, 40, 20, 90, 2).attr({fill: getColor('B', notes)});
+
+    var c1s = paper.rect( 54, 40, 12, 70, 2).attr({fill: getColor(['C#','Db'], notes)});
+    var d1s = paper.rect( 74, 40, 12, 70, 2).attr({fill: getColor(['D#','Eb'], notes)});
+    var f1s = paper.rect(114, 40, 12, 70, 2).attr({fill: getColor(['F#','Gb'], notes)});
+    var g1s = paper.rect(134, 40, 12, 70, 2).attr({fill: getColor(['G#','Ab'], notes)});
+    var a1s = paper.rect(154, 40, 12, 70, 2).attr({fill: getColor(['A#','Bb'], notes)});
+
+    var c2s = paper.rect(194, 40, 12, 70, 2).attr({fill: getColor(['C#','Db'], notes)});
+    var d2s = paper.rect(214, 40, 12, 70, 2).attr({fill: getColor(['D#','Eb'], notes)});
+    var f2s = paper.rect(254, 40, 12, 70, 2).attr({fill: getColor(['F#','Gb'], notes)});
+    var g2s = paper.rect(274, 40, 12, 70, 2).attr({fill: getColor(['G#','Ab'], notes)});
+    var a2s = paper.rect(294, 40, 12, 70, 2).attr({fill: getColor(['A#','Bb'], notes)});
+
+</script>
+
+<!--
+<div id="notepad">
+    bob
+</div>
+-->
+
+
+    </body>
+</html>
+

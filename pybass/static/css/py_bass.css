@@ -1,0 +1,113 @@
+body {
+    /*
+    background-color: #616161;
+    color: #e2e2e2;
+    */
+    margin-top: 0pt;
+    margin-right: 0pt;
+    margin-bottom: 0pt;
+    margin-left: 0pt;
+}
+#form_container {
+    width: 1070px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+#canvas_container {
+    width: 1070px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+
+    /* border: 1px green solid; */
+}
+#piano_container {
+    width: 1070px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: left;
+
+    /* border: 1px red solid; */
+}
+#circle_container {
+    width: 1070px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+
+    /* border: 1px blue solid; */
+}
+#scale_title {
+    width: 100%;
+    border: 0px solid red;
+    text-align: left;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+}
+
+select {
+    /*
+    background-color: #777;
+    color: #ffffff;
+    */
+    color: #000;
+    border: 0px;
+    padding: 4px;
+    border: 1px solid grey;
+    font-weight: bold;
+    /*
+    font-size: large;
+    */
+}
+
+
+/* **************************************************************** */
+
+
+#logoheader {
+    position: relative;
+    /* 
+    border: 1px solid green; 
+    */
+    height: 200px;
+}
+
+/* div { text-align: center; }  */
+#logo {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 8em; 
+}   
+
+
+#footer {
+    margin-top: 60px;
+    position: relative;
+    /*
+    border: 1px solid black;
+    */
+    text-align: center;
+    font-size: 0.9em;
+    height: 600px;
+    z-index: 4;
+}
+
+#copy {
+    margin-top: 60px;
+}

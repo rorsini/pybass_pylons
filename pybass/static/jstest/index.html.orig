@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>JS Testing</title>
+        <meta name="generator" content="Vim http://vim.org/">
+        <meta name="author" content="Rob Orsini">
+    </head>
+    <body>
+
+<script type="text/javascript">
+e = document.getElementById('stuff');
+console.log("e = " + e);
+</script>
+
+<pre><script src="jstest.js"></script></pre>
+<h1 id="stuff">Some Stuff...</h1>
+
+<script type="text/javascript">
+function notEmpty(){
+    var myTextField = document.getElementById('myText');
+    console.log("myTextField = " + myTextField);
+    if(myTextField.value != "")
+        alert("You entered: " + myTextField.value)
+    else
+        alert("Would you please enter some text?")      
+}
+</script>
+<input type='text' id='myText' />
+<input type='button' onclick='notEmpty()' value='Form Checker' />
+
+
+
+    </body>
+</html>
+
